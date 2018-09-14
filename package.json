@@ -1,0 +1,30 @@
+{
+  "name": "Doorchat",
+  "version": "0.0.4",
+  "description": "The Frontend take home project for DoorDash",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zacharyehren/doordash-interview-project"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "api-server": "node server.js"
+  },
+  "author": "Zach Ehren",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "hapi": "~16.4.0",
+    "inert": "^4.2.0",
+    "path": "^0.4.9",
+    "shortid": "^2.2.13"
+  },
+  "engines": {
+    "node": ">=6.11.1"
+  },
+  "devDependencies": {
+    "connect-modrewrite": "^0.7.9",
+    "es5-shim": "^4.0.1"
+  }
+}
