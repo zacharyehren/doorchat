@@ -4,6 +4,7 @@
     ctrl = this;
     ctrl.RoomsFactory = RoomsFactory;
     ctrl.MessagesFactory = MessagesFactory;
+    ctrl.username = $cookies.get('username');
 
     const findMinutes = function() {
       // Subtracts the current time by the time the username was created
@@ -37,6 +38,9 @@
     }
 
     listRooms();
+
+    // delete username cookie and local storage on window close
+    // if cookie == null, redirect to signInPage
 
 }
   angular

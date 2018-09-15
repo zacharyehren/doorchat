@@ -1,0 +1,55 @@
+/* chat rooms */
+
+.rooms-list {
+  position: fixed;
+  width: 220px;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 2;
+  overflow-y: auto;
+  background: #E63D48;
+  color: #586676;
+  padding: 20px;
+}
+
+.username {
+  color: white;
+  font-size: 20px;
+}
+
+.online {
+  color: white;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.chat-room {
+  padding: 0 100px 0 250px;
+  background: #EDEFF0;
+}
+
+.room-names {
+  padding: 10px 0;
+  font-size: 17px;
+  color: white;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.room-names:hover {
+  background-color: #691E24;
+  margin: 0 -20px;
+  padding-left: 20px;
+}
+
+.room-names:active {
+  background-color: #691E24;
+}
+
+
+a:hover {
+  color: white !important;
+  text-decoration: none !important;
+}
