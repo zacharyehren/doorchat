@@ -1,5 +1,5 @@
 (function() {
-  function MessagesFactory($http) {
+  function MessagesFactory($http, $cookies) {
 
     const MessagesFactory = {};
 
@@ -14,10 +14,25 @@
       });
     };
 
+    MessagesFactory.createMessage = function(message){
+      var createMessage = {
+        method: 'POST',
+        url: 'http://localhost:8080/api/rooms/' + $cookies.get('roomId') + '/messages',
+        data: {
+          name: $cookies.get('username'),
+          message: message
+        }
+      };
+      return $http(createMessage).then(function successCallback(response) {
+        MessagesFactory.newMessage = response.data;
+        console.log(MessagesFactory.newMessage);
+      });
+    };
+
     return MessagesFactory;
   };
 
   angular
     .module('doorchat')
-    .factory('MessagesFactory', ['$http', MessagesFactory])
+    .factory('MessagesFactory', ['$http', '$cookies', MessagesFactory])
 })();
