@@ -14,7 +14,13 @@
         url: '/',
         controller: 'SignInPageCtrl as signInPage',
         templateUrl: '/templates/signInPage.html'
-      });
+      })
+      $stateProvider
+        .state('chatRooms', {
+          url: '/chatRooms',
+          controller: 'ChatRoomsCtrl as chatRooms',
+          templateUrl: '/templates/chatRooms.html'
+        });
   }
 
   angular

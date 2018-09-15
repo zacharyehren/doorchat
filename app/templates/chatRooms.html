@@ -1,0 +1,10 @@
+<div ng-repeat="room in chatRooms.RoomsFactory.rooms">
+  <a href="" ng-click="chatRooms.roomSelected(room)">{{ room.name }}</a>
+</div>
+
+<div>
+  {{ chatRooms.RoomsFactory.roomInfo.name }}
+</div>
+<div ng-repeat="users in chatRooms.RoomsFactory.roomInfo.users">
+  {{ users }}
+</div>
