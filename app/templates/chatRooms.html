@@ -8,3 +8,8 @@
 <div ng-repeat="users in chatRooms.RoomsFactory.roomInfo.users">
   {{ users }}
 </div>
+
+<div ng-repeat="messages in chatRooms.MessagesFactory.messages">
+  {{ messages.name }} <br />
+  {{ messages.message }}
+</div>
