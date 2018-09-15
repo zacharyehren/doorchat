@@ -3,6 +3,10 @@
 
     ctrl = this;
 
+    ctrl.submitUsername = function(){
+      $cookies.put('username', ctrl.username);
+    }
+
 }
   angular
     .module('doorchat')
