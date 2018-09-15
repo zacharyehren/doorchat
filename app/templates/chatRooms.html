@@ -1,3 +1,7 @@
+<div>
+  You've been online for {{ chatRooms.online }} minutes
+</div>
+
 <div ng-repeat="room in chatRooms.RoomsFactory.rooms">
   <a href="" ng-click="chatRooms.roomSelected(room)">{{ room.name }}</a>
 </div>

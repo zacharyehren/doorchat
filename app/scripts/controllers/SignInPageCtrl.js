@@ -6,6 +6,7 @@
     ctrl.submitUsername = function(){
       $cookies.put('username', ctrl.username);
       $location.path('/chatRooms')
+      localStorage.setItem("timeLoggedIn", Date.now());
     }
 
 }
