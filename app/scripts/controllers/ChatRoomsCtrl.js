@@ -5,6 +5,7 @@
     ctrl.RoomsFactory = RoomsFactory;
     ctrl.MessagesFactory = MessagesFactory;
     ctrl.username = $cookies.get('username');
+    ctrl.roomOpened = false;
 
     const findMinutes = function() {
       // Subtracts the current time by the time the username was created
@@ -23,6 +24,7 @@
       MessagesFactory.retrieveMessages(room.id);
       $cookies.put('roomId', room.id);
       ctrl.online = findMinutes();
+      ctrl.roomOpened = true;
     }
 
     ctrl.createMessage = function(){

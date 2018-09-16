@@ -1,5 +1,9 @@
 /* chat rooms */
 
+h3 {
+  font-weight: 400 !important;
+}
+
 .rooms-list {
   position: fixed;
   width: 220px;
@@ -12,6 +16,7 @@
   background: #E63D48;
   color: #586676;
   padding: 20px;
+  z-index: 3;
 }
 
 .username {
@@ -48,8 +53,22 @@
   background-color: #691E24;
 }
 
+.chat-room-section {
+  padding-left: 220px;
+}
 
-a:hover {
-  color: white !important;
-  text-decoration: none !important;
+.room-info {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+  -webkit-box-shadow: 0 7px 6px -6px #808080;
+  -moz-box-shadow: 0 7px 6px -6px #808080;
+  box-shadow: 0 7px 6px -6px #808080;
+  z-index: 2;
+  position: relative;
+}
+
+.room-users {
+  display: inline;
+  font-size: 15px;
 }
