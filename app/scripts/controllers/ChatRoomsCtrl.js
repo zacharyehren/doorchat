@@ -7,6 +7,10 @@
     ctrl.username = $cookies.get('username');
     ctrl.roomOpened = false;
 
+    // let el = angular.element(document.querySelector('#chat-room-content'));
+    // el.scrollIntoView();
+
+
     const findMinutes = function() {
       // Subtracts the current time by the time the username was created
       // Multiply by 60,000 to convert milliseconds to minutes

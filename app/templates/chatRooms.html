@@ -1,4 +1,5 @@
-<section class="rooms-list">
+<!-- chat rooms list -->
+<div class="rooms-list">
   <p class="username">
     {{chatRooms.username}}
   </p>
@@ -10,28 +11,33 @@
       {{ room.name }}
     </div>
   </div>
-</section>
+</div>
 
 <div class="chat-room-section" ng-show="chatRooms.roomOpened">
-<section class="room-info">
-  <h3>
+<!-- room details section -->
+  <div class="room-info">
+    <h3>
     {{ chatRooms.RoomsFactory.roomInfo.name }}
   </h3>
-  <div class="room-users" ng-repeat="users in chatRooms.RoomsFactory.roomInfo.users">
-    {{ users }}{{ $last ? '' : ','}}
+    <div class="room-users" ng-repeat="users in chatRooms.RoomsFactory.roomInfo.users | orderBy">
+      {{ users }}{{ $last ? '' : ','}}
+    </div>
   </div>
-</section>
 
-<section class="chat-room">
-  <div ng-repeat="messages in chatRooms.MessagesFactory.messages track by $index">
-    {{ messages.name }} <br /> {{ messages.message }}
+<!-- chat room content -->
+  <div id="chat-room-content" class="chat-room">
+    <div ng-repeat="messages in chatRooms.MessagesFactory.messages track by $index">
+      <div class="message-content" ng-class="messages.name == chatRooms.username ? 'current-user-content' : 'other-user-content'">
+        {{ messages.message }}
+      </div>
+      <div ng-class="messages.name == chatRooms.username ? 'current-user-username' : 'other-user-username'">
+        {{ messages.name }}
+      </div>
+    </div>
   </div>
-</section>
 
-<section>
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Type a message..." ng-model="chatRooms.newMessage">
-    <button class="btn btn-default" ng-click="chatRooms.createMessage()">Submit</button>
-  </div>
-</section>
+<!-- submit message section  -->
+    <form ng-submit="chatRooms.createMessage()" class="submit-message-section">
+      <input  type="text" class="message-input" placeholder="Type a message..." ng-model="chatRooms.newMessage">
+    </form>
 </div>

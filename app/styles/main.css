@@ -1,12 +1,12 @@
-/* chat rooms */
-
 h3 {
   font-weight: 400 !important;
 }
 
+/* chat rooms list */
+
 .rooms-list {
   position: fixed;
-  width: 220px;
+  width: 235px;
   bottom: 0;
   top: 0;
   left: 0;
@@ -30,11 +30,6 @@ h3 {
   margin-bottom: 40px;
 }
 
-.chat-room {
-  padding: 0 100px 0 250px;
-  background: #EDEFF0;
-}
-
 .room-names {
   padding: 10px 0;
   font-size: 17px;
@@ -53,8 +48,10 @@ h3 {
   background-color: #691E24;
 }
 
+/* room details section */
+
 .chat-room-section {
-  padding-left: 220px;
+  padding-left: 235px;
 }
 
 .room-info {
@@ -71,4 +68,66 @@ h3 {
 .room-users {
   display: inline;
   font-size: 15px;
+}
+
+/* chat room content */
+
+.chat-room {
+  background: #EDEFF0;
+  padding: 0 15px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.message-content {
+  max-width: 350px;
+  padding: 15px;
+  border-radius: 15px;
+  overflow-wrap: break-word;
+  display: inline-block;
+}
+
+.other-user-content {
+  background: white;
+}
+
+.current-user-content {
+  background: #E63D48;
+  float: right;
+  color: white;
+  clear: both;
+}
+
+.other-user-username {
+  color: #5E5E5E;
+  margin: 5px 0 20px 0;
+}
+
+.current-user-username {
+  color: #5E5E5E;
+  margin: 5px 0 20px 0;
+  float: right;
+  clear: both;
+}
+
+/* submit message section  */
+
+.submit-message-section {
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  -webkit-box-shadow: 0 -7px 6px -6px #808080;
+  -moz-box-shadow: 0 -7px 6px -6px #808080;
+  box-shadow: 0 -7px 6px -6px #808080;
+}
+
+.message-input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border-radius: 3px;
+  border: 1px solid #D1D3D9;
 }
