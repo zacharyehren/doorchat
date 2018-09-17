@@ -4,11 +4,15 @@ h3 {
 
 /* sign-in page */
 
+.doordash-signin-logo {
+  display: block;
+  width: 500px;
+  height: auto;
+  margin: auto;
+}
+
 .username-form {
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  top: 40%;
+  margin: auto;
   width: 40%;
 }
 
@@ -23,7 +27,7 @@ h3 {
 .username-button {
   display: block;
   width: 100%;
-  background: #E63D48;
+  background: #FF0000;
   padding: 10px;
   border-radius: 3px;
   text-align: center;
@@ -32,6 +36,12 @@ h3 {
 }
 
 /* chat rooms list */
+
+.doordash-chat-logo{
+  width: 175px;
+  height: auto;
+  margin: -50px 0 -35px -14px;
+}
 
 .rooms-list {
   position: fixed;
@@ -42,7 +52,7 @@ h3 {
   margin: 0;
   z-index: 2;
   overflow-y: auto;
-  background: #E63D48;
+  background: #FF0000;
   color: #586676;
   padding: 20px;
   z-index: 3;
@@ -96,7 +106,7 @@ h3 {
 }
 
 .current-user {
-  color: #E63D48;
+  color: #FF0000;
 }
 
 /* chat room content */
@@ -129,7 +139,7 @@ h3 {
 }
 
 .current-user-content {
-  background: #E63D48;
+  background: #FF0000;
   float: right;
   color: white;
   clear: both;

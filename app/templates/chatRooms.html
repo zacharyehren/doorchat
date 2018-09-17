@@ -1,5 +1,8 @@
 <!-- chat rooms list -->
 <div class="rooms-list">
+  <a href="https://www.doordash.com/">
+    <img class="doordash-chat-logo" src="https://cdn.doordash.com/static/img/doordash-square-red.jpg?dd-nonce=1">
+  </a>
   <p class="username">
     {{chatRooms.username}}
   </p>
@@ -16,7 +19,7 @@
 </div>
 
 <div class="chat-room-section" ng-show="chatRooms.roomOpened">
-<!-- room details section -->
+  <!-- room details section -->
   <div class="room-info">
     <h3>
     {{ chatRooms.RoomsFactory.roomInfo.name }}
@@ -26,7 +29,7 @@
     </div>
   </div>
 
-<!-- chat room content -->
+  <!-- chat room content -->
   <div id="chat-room-content" class="chat-room">
     <div ng-repeat="messages in chatRooms.MessagesFactory.messages track by $index">
       <div class="message-content" ng-class="messages.name == chatRooms.username ? 'current-user-content' : 'other-user-content'">
@@ -38,8 +41,8 @@
     </div>
   </div>
 
-<!-- submit message section  -->
-    <form ng-submit="chatRooms.createMessage()" class="submit-message-section">
-      <input  type="text" class="message-input" placeholder="Type a message..." ng-model="chatRooms.newMessage">
-    </form>
+  <!-- submit message section  -->
+  <form ng-submit="chatRooms.createMessage()" class="submit-message-section">
+    <input type="text" class="message-input" placeholder="Type a message..." ng-model="chatRooms.newMessage">
+  </form>
 </div>
