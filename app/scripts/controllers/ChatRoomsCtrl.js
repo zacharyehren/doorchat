@@ -22,10 +22,9 @@
     ctrl.roomSelected = function(room) {
       RoomsFactory.retrieveRoomInfo(room.id);
       MessagesFactory.retrieveMessages(room.id);
-      $cookies.put('roomId', room.id);
+      ctrl.roomId = room.id;
       ctrl.online = findMinutes();
       ctrl.roomOpened = true;
-
     }
 
     ctrl.createMessage = function() {
@@ -33,7 +32,7 @@
         return;
       } else {
         MessagesFactory.createMessage(ctrl.newMessage).then(function() {
-          MessagesFactory.retrieveMessages($cookies.get('roomId'));
+          MessagesFactory.retrieveMessages(ctrl.roomId);
         });
         ctrl.newMessage = "";
         ctrl.online = findMinutes();
@@ -41,10 +40,6 @@
     }
 
     listRooms();
-    
-
-    // delete username cookie and local storage on window close
-    // if cookie == null, redirect to signInPage
 
   }
   angular

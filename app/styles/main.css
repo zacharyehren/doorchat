@@ -38,15 +38,12 @@ h3 {
   cursor: pointer;
 }
 
-.room-names:hover {
+.room-names:hover, .room-selected {
   background-color: #691E24;
   margin: 0 -20px;
   padding-left: 20px;
 }
 
-.room-names:active {
-  background-color: #691E24;
-}
 
 /* room details section */
 
@@ -68,6 +65,10 @@ h3 {
 .room-users {
   display: inline;
   font-size: 15px;
+}
+
+.current-user {
+  color: #E63D48;
 }
 
 /* chat room content */

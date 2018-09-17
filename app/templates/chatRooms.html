@@ -5,11 +5,11 @@
   </p>
   <p class="online">
     Online for {{ chatRooms.online }}
-    <span ng-show="chatRooms.online > 1 || chatRooms.online == 0">minutes</span> 
+    <span ng-show="chatRooms.online > 1 || chatRooms.online == 0">minutes</span>
     <span ng-show="chatRooms.online == 1">minute</span>
   </p>
   <div ng-repeat="room in chatRooms.RoomsFactory.rooms">
-    <div class="room-names" ng-click="chatRooms.roomSelected(room)">
+    <div class="room-names" ng-class="room.id == chatRooms.roomId ? 'room-selected' : ''" ng-click="chatRooms.roomSelected(room)">
       {{ room.name }}
     </div>
   </div>
@@ -21,8 +21,8 @@
     <h3>
     {{ chatRooms.RoomsFactory.roomInfo.name }}
   </h3>
-    <div class="room-users" ng-repeat="users in chatRooms.RoomsFactory.roomInfo.users | orderBy">
-      {{ users }}{{ $last ? '' : ','}}
+    <div class="room-users" ng-repeat="user in chatRooms.RoomsFactory.roomInfo.users | orderBy">
+      <span ng-class="user == chatRooms.username ? 'current-user' : ''">{{ user }}{{ $last ? '' : ','}}</span>
     </div>
   </div>
 
