@@ -1,7 +1,7 @@
 ## Doorchat
 Get connected with all of your favorite folks at Doordash!
 
-Doorchat is a chat app built through AngularJS.
+*Doorchat is a chat app powered by AngularJS.*
 
 ## Configuration
 
