@@ -4,7 +4,9 @@
     {{chatRooms.username}}
   </p>
   <p class="online">
-    Online for {{ chatRooms.online }} minutes
+    Online for {{ chatRooms.online }}
+    <span ng-show="chatRooms.online > 1 || chatRooms.online == 0">minutes</span> 
+    <span ng-show="chatRooms.online == 1">minute</span>
   </p>
   <div ng-repeat="room in chatRooms.RoomsFactory.rooms">
     <div class="room-names" ng-click="chatRooms.roomSelected(room)">

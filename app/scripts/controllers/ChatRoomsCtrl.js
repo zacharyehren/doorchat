@@ -1,15 +1,11 @@
 (function() {
-  function ChatRoomsCtrl(RoomsFactory, MessagesFactory, $cookies) {
+  function ChatRoomsCtrl(RoomsFactory, MessagesFactory, $cookies, $location, $anchorScroll) {
 
     ctrl = this;
     ctrl.RoomsFactory = RoomsFactory;
     ctrl.MessagesFactory = MessagesFactory;
     ctrl.username = $cookies.get('username');
     ctrl.roomOpened = false;
-
-    // let el = angular.element(document.querySelector('#chat-room-content'));
-    // el.scrollIntoView();
-
 
     const findMinutes = function() {
       // Subtracts the current time by the time the username was created
@@ -18,7 +14,7 @@
       return Math.floor((Date.now() - localStorage.getItem("timeLoggedIn")) / 60000);
     }
 
-    const listRooms = function(){
+    const listRooms = function() {
       RoomsFactory.retrieveAllRooms();
       ctrl.online = findMinutes();
     }
@@ -29,13 +25,14 @@
       $cookies.put('roomId', room.id);
       ctrl.online = findMinutes();
       ctrl.roomOpened = true;
+
     }
 
-    ctrl.createMessage = function(){
-      if(ctrl.newMessage == undefined || ctrl.newMessage.length < 1){
+    ctrl.createMessage = function() {
+      if (ctrl.newMessage == undefined || ctrl.newMessage.length < 1) {
         return;
       } else {
-        MessagesFactory.createMessage(ctrl.newMessage).then(function(){
+        MessagesFactory.createMessage(ctrl.newMessage).then(function() {
           MessagesFactory.retrieveMessages($cookies.get('roomId'));
         });
         ctrl.newMessage = "";
@@ -44,12 +41,13 @@
     }
 
     listRooms();
+    
 
     // delete username cookie and local storage on window close
     // if cookie == null, redirect to signInPage
 
-}
+  }
   angular
     .module('doorchat')
-    .controller('ChatRoomsCtrl', ['RoomsFactory', 'MessagesFactory', '$cookies', ChatRoomsCtrl]);
+    .controller('ChatRoomsCtrl', ['RoomsFactory', 'MessagesFactory', '$cookies', '$location', '$anchorScroll', ChatRoomsCtrl]);
 })();
