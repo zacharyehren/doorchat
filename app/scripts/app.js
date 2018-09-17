@@ -24,6 +24,6 @@
   }
 
   angular
-    .module('doorchat', ['ui.router', 'ui.bootstrap', 'ngCookies', 'ngRoute'])
+    .module('doorchat', ['ui.router', 'ui.bootstrap', 'ngCookies', 'ngRoute', 'luegg.directives'])
     .config(config);
 })();

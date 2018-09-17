@@ -10,7 +10,6 @@
       };
       return $http(retrieveAllRooms).then(function successCallback(response) {
         RoomsFactory.rooms = response.data;
-        console.log(RoomsFactory.rooms);
       });
     };
 
@@ -21,7 +20,6 @@
       };
       return $http(retrieveRoomInfo).then(function successCallback(response) {
         RoomsFactory.roomInfo = response.data;
-        console.log(RoomsFactory.roomInfo);
       });
     };
 

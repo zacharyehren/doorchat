@@ -10,14 +10,13 @@
       };
       return $http(retrieveMessages).then(function successCallback(response) {
         MessagesFactory.messages = response.data;
-        console.log(MessagesFactory.messages);
       });
     };
 
-    MessagesFactory.createMessage = function(message){
+    MessagesFactory.createMessage = function(message, roomId){
       var createMessage = {
         method: 'POST',
-        url: 'http://localhost:8080/api/rooms/' + $cookies.get('roomId') + '/messages',
+        url: 'http://localhost:8080/api/rooms/' + roomId + '/messages',
         data: {
           name: $cookies.get('username'),
           message: message
@@ -25,7 +24,6 @@
       };
       return $http(createMessage).then(function successCallback(response) {
         MessagesFactory.newMessage = response.data;
-        console.log(MessagesFactory.newMessage);
       });
     };
 
