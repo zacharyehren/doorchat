@@ -1,6 +1,8 @@
 ## Doorchat
 Get connected with all of your favorite folks at Doordash!
 
+Doorchat is a chat app built through AngularJS.
+
 ## Configuration
 
 The project uses Node to run a JS server in development.
@@ -13,7 +15,7 @@ $ npm install
 
 ## Run the Application
 
-Run the application server:
+Run the application server which serves the files from `/app`:
 
 ```
 $ npm start
