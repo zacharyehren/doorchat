@@ -1,8 +1,9 @@
 ## Doorchat
+Get connected with all of your favorite folks at Doordash!
 
 ## Configuration
 
-The project uses Node to run a JS server in development. This will be important when we want to use urls /album or /collection instead of the basic album.html or collection.html. It may  help to review [our resource on NPM and `package.json` files](https://www.bloc.io/resources/npm-and-package-json).
+The project uses Node to run a JS server in development.
 
 Install the project dependencies by running:
 
