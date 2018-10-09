@@ -140,21 +140,18 @@ h3 {
 
 .current-user-content {
   background: #FF0000;
-  float: right;
   color: white;
-  clear: both;
+  text-align: right;
 }
 
-.other-user-username {
+.other-user-message-block {
   color: #5E5E5E;
   margin: 5px 0 20px 0;
 }
 
-.current-user-username {
-  color: #5E5E5E;
+.current-user-message-block {
+  text-align: right;
   margin: 5px 0 20px 0;
-  float: right;
-  clear: both;
 }
 
 /* submit message section  */

@@ -16,7 +16,7 @@
     const findMinutes = function() {
       // Subtracts the current time by the time the username was created
       // Divide by 60,000 to convert milliseconds to minutes
-      return Math.floor((Date.now() - localStorage.getItem("timeLoggedIn")) / 60000);
+      return Math.floor((Date.now() - $cookies.get("timeLoggedIn")) / 60000);
     }
 
     const setTimer = function() {

@@ -31,11 +31,11 @@
 
   <!-- chat room content -->
   <div scroll-glue="true" class="chat-room">
-    <div ng-repeat="messages in chatRooms.MessagesFactory.messages">
+    <div ng-repeat="messages in chatRooms.MessagesFactory.messages" ng-class="messages.name == chatRooms.username ? 'current-user-message-block' : 'other-user-message-block'">
       <div class="message-content" ng-class="messages.name == chatRooms.username ? 'current-user-content' : 'other-user-content'">
         {{ messages.message }}
       </div>
-      <div ng-class="messages.name == chatRooms.username ? 'current-user-username' : 'other-user-username'">
+      <div>
         {{ messages.name }}
       </div>
     </div>
