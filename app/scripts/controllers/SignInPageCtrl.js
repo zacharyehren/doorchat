@@ -5,8 +5,8 @@
 
     ctrl.submitUsername = function(){
       $cookies.put('username', ctrl.username);
-      $location.path('/chatRooms')
       $cookies.put("timeLoggedIn", Date.now());
+      $location.path('/chatRooms')
     }
 
 }
